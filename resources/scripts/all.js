@@ -9197,9 +9197,28 @@ var $ = require('jquery');
 // Module
 var greetings = require('./greeting');
 console.log( greetings('Joris') );
-},{"./greeting":3,"jquery":1}],3:[function(require,module,exports){
-// greetings.js
+
+var name = require('./name');
+console.log( name('Henkie Penkie').firstName() );
+},{"./greeting":3,"./name":4,"jquery":1}],3:[function(require,module,exports){
 module.exports = function(name) {
     return 'Moi ' + name + '!';
+};
+},{}],4:[function(require,module,exports){
+module.exports = function(name) {
+    var nameArray = name.split(' ');
+
+    function getFirstName() {
+        return nameArray[0];
+    }
+
+    function getLastName() {
+        return nameArray[1];
+    }
+
+    return {
+        firstName: getFirstName,
+        lastName: getLastName
+    };
 };
 },{}]},{},[2]);
