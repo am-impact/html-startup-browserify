@@ -9191,15 +9191,16 @@ return jQuery;
 }));
 
 },{}],2:[function(require,module,exports){
-// jQuery inladen
+FW = FW || {};
 var $ = require('jquery');
 
 // Module
-var greetings = require('./greeting');
-console.log( greetings('Joris') );
+FW.greetings = require('./greeting');
+console.log( FW.greetings('Joris') );
 
-var name = require('./name');
-console.log( name('Henkie Penkie').firstName() );
+FW.name = require('./name');
+console.log( FW.name('Henkie Penkie').firstName() );
+
 },{"./greeting":3,"./name":4,"jquery":1}],3:[function(require,module,exports){
 module.exports = function(name) {
     return 'Moi ' + name + '!';
