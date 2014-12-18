@@ -1,0 +1,21 @@
+## Compiled files
+*.html
+# resources/css/*.css
+
+## Codekit
+config.codekit
+
+## Sourcemaps
+## *.map
+
+## Node.js
+node_modules
+
+## Sass
+.sass-cache
+
+## OS X
+.DS_Store
+
+## Windows
+Thumbs.db
